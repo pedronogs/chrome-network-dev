@@ -1,0 +1,15 @@
+{
+    "name": "Chrome Network Dev",
+    "version": "1.0",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["src/content.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        "src/networktab/networktab.html",
+        "src/networktab/networktab.js"
+    ]
+}
