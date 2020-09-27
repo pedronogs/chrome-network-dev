@@ -9,7 +9,7 @@
         }
     ],
     "background": {
-        "scripts": ["background.js"]
+        "scripts": ["src/background.js"]
     },
     "web_accessible_resources": [
         "src/networktab/networktab.html",

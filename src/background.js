@@ -16,6 +16,7 @@ chrome.debugger.attach(
                         chrome.tabs.sendRequest(46, {
                             "id": data.requestId,
                             "type": "request",
+                            // "url": data.response.url,
                             "data": requestData.postData 
                         });
                     }
@@ -27,6 +28,7 @@ chrome.debugger.attach(
                         chrome.tabs.sendRequest(46, {
                             "id": data.requestId,
                             "type": "response",
+                            // "url": data.response.url,
                             "data": responseBody.body
                         });
                     }

@@ -8,7 +8,10 @@
 <body>
     <div id="network-tab">
         <div id="network-tab-move">Hold HERE to move</div>
-        <span></span>
+        <div id="network-tab-content" class="pl-5 pb-2">
+            <ul></ul>
+            <span></span>
+        </div>
     </div>
 </body>
 </html>
@@ -18,8 +21,8 @@
         position: absolute;
         right: 30px;
         top: 30px;
-        height: 200px;
-        width: 300px;
+        height: 500px;
+        width: 700px;
         z-index: 9999;
         resize:both;
         overflow: hidden;
@@ -31,6 +34,9 @@
     }
 
     #network-tab-move {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: black;
         color: white;
         width: 100%;
@@ -39,5 +45,31 @@
         text-align: center;
         align-items: center;
         font-size: 1em;
+    }
+
+    #network-tab-content {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+
+    #network-tab-content ul {
+        height: 100%;
+        width: 20%;
+        font-size: 1rem;
+        border-right: solid 1px black;
+        padding-right: 10px;
+        padding-top: 10px;
+    }
+
+    #network-tab-content ul li:hover {
+        background-color: rgb(193, 255, 249);
+        cursor: pointer;
+    }
+
+    #network-tab-content span {
+        width: 80%;
+        padding: 15px;
+        white-space: wrap;
     }
 </style>
