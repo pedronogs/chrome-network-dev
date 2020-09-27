@@ -22,3 +22,8 @@ fetch(chrome.extension.getURL('/src/networktab/networktab.js'))
         console.log(error);
     });
 
+// Listens for requests messages
+chrome.extension.onRequest.addListener(function (request) {
+    console.log("ID: " + request.id + " Type: " + request.type + " Data: " + request.data);
+});
+

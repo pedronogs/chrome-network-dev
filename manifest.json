@@ -8,8 +8,15 @@
           "js": ["src/content.js"]
         }
     ],
+    "background": {
+        "scripts": ["background.js"]
+    },
     "web_accessible_resources": [
         "src/networktab/networktab.html",
         "src/networktab/networktab.js"
+    ],
+    "permissions": [
+        "debugger",
+        "tabs"
     ]
 }
