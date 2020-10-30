@@ -8,24 +8,40 @@
 <body>
     <div id="network-tab">
         <div id="network-tab-move">Hold HERE to move</div>
-        <div id="network-tab-content" class="pl-5 pb-2">
-            <ul></ul>
-            <span></span>
+        <div id="network-tab-content">
+            <div id="network-requests"></div>
+            <div id="network-data"></div>
         </div>
     </div>
 </body>
 </html>
 
 <style scoped>
+    strong {
+        font-weight: bolder!important;
+    }
+
+    pre {
+        outline: 1px solid #ccc; padding: 5px; margin: 5px;
+    }
+
+    .string { color: green; }
+    .number { color: darkorange; }
+    .boolean { color: blue; }
+    .null { color: magenta; }
+    .key { color: red; }
+
     #network-tab {
         position: absolute;
         right: 30px;
         top: 30px;
         height: 500px;
         width: 700px;
+        min-height: 20vh;
+        min-width:20vw;
         z-index: 9999;
         resize:both;
-        overflow: hidden;
+        overflow-y: scroll;
 
         background-color: white;
 
@@ -51,25 +67,34 @@
         display: flex;
         flex-direction: row;
         height: 100%;
+        width: 100%;
     }
 
-    #network-tab-content ul {
+    #network-tab-content #network-requests {
+        width: 40%;
         height: 100%;
-        width: 20%;
         font-size: 1rem;
         border-right: solid 1px black;
-        padding-right: 10px;
-        padding-top: 10px;
+        overflow-y: scroll;
     }
 
-    #network-tab-content ul li:hover {
+    .request-div {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-bottom: thin solid grey;
+    }
+
+    .request-div:hover {
         background-color: rgb(193, 255, 249);
         cursor: pointer;
     }
 
-    #network-tab-content span {
+    #network-tab-content #network-data {
         width: 80%;
         padding: 15px;
         white-space: wrap;
+        overflow-y: scroll;
     }
 </style>
